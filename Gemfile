@@ -13,6 +13,7 @@ gem 'twitter-bootstrap-rails'
 gem "therubyracer"
 gem "less-rails"
 gem "ffaker"
+gem "paperclip"
 
 
 group :production do
