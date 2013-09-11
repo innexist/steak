@@ -1,0 +1,21 @@
+ development:
+  adapter: postgresql
+  database: steak_development
+  pool: 5
+  timeout: 5000
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: steak_test
+  pool: 5
+  timeout: 5000
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: ololo
+  pool: 15
+  username: ololo
+  password: ololo
+  template: template0

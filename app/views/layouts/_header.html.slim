@@ -1,0 +1,31 @@
+.container
+	.row
+		.span12
+			a href="#" title="logo"
+				.logo = image_tag 'logo.png'
+			#menu			
+				ul
+					li = link_to 'Home', root_path
+					li = link_to  'Portfolio', '#'
+					li = link_to 'Drops', "#"
+					li = link_to 'Full width', "#"
+					li = link_to 'Archives', "#"	
+					li = link_to 'Blog', "#"
+					li = link_to 'Contact', '#'
+
+		.span12
+			#breadcrumb
+				| link/link
+				'
+				= image_tag 'sewing.png'
+				= image_tag 'sewing.png'
+
+		/.span12
+		/	ul.my_breadcrumb
+		/		li
+		/			=link_to 'Home'
+		/			span class='divider' &frasl;
+		/		li
+		/			=link_to 'Blog'
+		/			span class='divider' &frasl;
+		/		li.active Данные

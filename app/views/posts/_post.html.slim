@@ -1,0 +1,9 @@
+.postcont
+	.prevpost
+		.date
+			.mont = post.created_at.to_s(:month)
+			.day = post.created_at.to_s(:day)
+			
+		h2 = link_to post.title, post_path(post)
+		.text = truncate strip_tags(post.text), length: 600, omission: '.', separator: '.'
+		.more = link_to 'Read More +', post_path(post)
