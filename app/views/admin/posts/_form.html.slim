@@ -1,0 +1,21 @@
+.container
+	.row
+		.span12
+			.post_form
+				= form_for [:admin, @post] do |f|
+					- if @post.errors.any?
+						#error_explanation
+						  ul
+						    - @post.errors.each do |attr, msg|
+						      li = msg
+					.form_item
+						= f.label :title
+						= f.text_field :title
+					.form_item
+						= f.label :text
+						= f.text_area :text
+					.form_item
+						= f.label :image
+						= f.file_field :image
+					.form_item
+						= f.submit 'отправить'

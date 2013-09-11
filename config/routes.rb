@@ -5,8 +5,11 @@ Steak::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'public#index'
 
-  resources :posts
+  resources :posts, only: [:index, :show]
 
+  namespace :admin do
+    resources :posts, except: [:index, :show]
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
